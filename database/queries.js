@@ -34,22 +34,6 @@ function getSingleUser(req, res, next) {
     });
 }
 
-function updateSingleUser(req, res, next) {
-  db
-    .none(
-      "update users set username = ${newName} where username = ${username}",
-      req.body
-    )
-    .then(function(data) {
-      res.status(200).json({
-        status: "success",
-        message: "Changed one user"
-      });
-    })
-    .catch(function(err) {
-      return next(err);
-    });
-}
 
 function registerUser(req, res, next) {
   return authHelpers
@@ -77,5 +61,5 @@ module.exports = {
   getAllUsers: getAllUsers,
   getSingleUser: getSingleUser,
   registerUser: registerUser,
-  updateSingleUser: updateSingleUser
+
 };
