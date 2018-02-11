@@ -11,4 +11,4 @@ CREATE TABLE users (
 );
 
 INSERT INTO users (username, password_digest)
-  VALUES ('Tyler', 'password'), ('Shannon', 'password1'), ('Richard', 'password2');
+  VALUES ('helloword', 'password'), ('Shannon', 'password1'), ('Richard', 'password2');
