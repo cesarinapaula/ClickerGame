@@ -21,13 +21,13 @@ app.get('/', (req, res)=>{
     res.send('I AM COMMITING TO EXPRESS !!')
 })
 
-// app.get('/new', (req, res)=>{
-//  let num = req.params.num
-//  let obj = {
-//     num:Math.floor(Math.random()*100)
-//  }
-//  res.send(obj)
-// })
+app.get('/new', (req, res)=>{
+ let num = req.params.num
+ let obj = {
+    num:Math.floor(Math.random()*100)
+ }
+ res.send(obj)
+}) 
 
 app.get('/login', (req, res)=>{
     let username= req.params.username
