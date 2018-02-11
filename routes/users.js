@@ -17,9 +17,9 @@
 const app = require('express')();
 const port = 8000;
 
-app.get('/', (req, res)=>{
-    res.send('I AM COMMITING TO EXPRESS !!')
-})
+// app.get('/', (req, res)=>{
+//     res.send('I AM COMMITING TO EXPRESS !!')
+// })
 
 app.get('/new', (req, res)=>{
  let num = req.params.num
