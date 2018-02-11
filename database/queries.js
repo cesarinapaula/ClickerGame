@@ -19,20 +19,20 @@ function getAllUsers(req, res, next) {
     });
 }
 
-function getSingleUser(req, res, next) {
-  db
-    .any("select * from users where username = ${username}", req.params)
-    .then(function(data) {
-      res.status(200).json({
-        status: "success",
-        data: data,
-        message: "Fetched one user"
-      });
-    })
-    .catch(function(err) {
-      return next(err);
-    });
-}
+// function getSingleUser(req, res, next) {
+//   db
+//     .any("select * from users where username = ${username}", req.params)
+//     .then(function(data) {
+//       res.status(200).json({
+//         status: "success",
+//         data: data,
+//         message: "Fetched one user"
+//       });
+//     })
+//     .catch(function(err) {
+//       return next(err);
+//     });
+// }
 
 
 function registerUser(req, res, next) {
